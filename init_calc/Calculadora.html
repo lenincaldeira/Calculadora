@@ -11,7 +11,7 @@
     <style >
         *{
             margin: 0;
-            padding: 0;=
+            padding: 0;
         }
         body{
             font-family: 'Roboto', sans-serif;
@@ -43,8 +43,7 @@
         }
        .botao:hover{
            background-color: black;
-       }
-        
+        }
         #resultado{
             width: 210px;
             height: 35px;
@@ -66,7 +65,7 @@
             <table>
                 <tr>
                     <td><button class="botao" onclick="clean()">C</button></td>
-                    <td><button class="botao"><</button></td>
+                    <td><button class="botao" onclick="back()"><</button></td>
                     <td><button class="botao" onclick="insert('/')">/</button></td>
                     <td><button class="botao" onclick="insert('x')">X</button></td>
                 </tr>
@@ -90,7 +89,7 @@
                 </tr>
                 <tr>
                     <td colspan="2"><button class="botao" style="width:108px" onclick="insert('0')">0</button></td>
-                    <td><button class="botao">.</button></td>
+                    <td><button class="botao" onclick="insert('.')">.</button></td>
                 </tr>
             </table>
         </div>
@@ -105,6 +104,12 @@
         {
             document.getElementById('resultado').innerHTML = "";
         }
+        function back()
+        {
+            var resultado = document.getElementById('resultado').innerHTML;
+            document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
+        }
+    
     </script>
 </body>
 </html>
