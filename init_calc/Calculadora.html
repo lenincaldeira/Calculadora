@@ -59,6 +59,7 @@
 <body>
     <div class="fundo">
         <h1>Lenin Caldeira</h1>
+        <img src="C:\Users\Veronese\sites\Calculadora\init_calc\leninperfil.jpg" alt="Lenin Caldeira" width=100 height=100>
         <div class="calculadora">
             <h1>Calculadora</h1>
             <p id="resultado"></p>
@@ -115,6 +116,10 @@
             if(resultado)
             {
                document.getElementById('resultado').innerHTML = eval(resultado);
+            }
+            else
+            {
+                document.getElementById('resultado').innerHTML = "Error...";
             }
         }
     </script>
